@@ -17,11 +17,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         inserisci = (Button)findViewById(R.id.inserisci);
+        gd = new GestioneDati();
         titolo = (EditText)findViewById(R.id.titolo);
         inserisci.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                gd.addBrani();
+                gd.addBrani(titolo.getText().toString().toString());
             }
         });
 

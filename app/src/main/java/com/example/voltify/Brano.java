@@ -40,4 +40,8 @@ public class Brano {
     public void setDataCreazione(Date dataCreazione) {
         this.dataCreazione = dataCreazione;
     }
+
+    public String toString(){
+        return titolo;
+    }
 }
