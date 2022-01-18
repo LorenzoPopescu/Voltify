@@ -1,15 +1,18 @@
 package com.example.voltify;
 
-import java.util.Date;
-
 public class Brano {
     private String titolo;
+    private String genere;
     private int durata;
-    private String autore;
-    private Date dataCreazione;
+    private String regista;
+    private String dataCreazione;
 
-    public Brano(String titolo){
+    public Brano(String titolo, String genere, int durata, String dataCreazione, String regista){
         this.titolo=titolo;
+        this.genere=genere;
+        this.durata=durata;
+        this.dataCreazione=dataCreazione;
+        this.regista=regista;
     }
 
     public String getTitolo(){
@@ -19,6 +22,13 @@ public class Brano {
         this.titolo=titolo;
     }
 
+    public String getGenere(){
+        return genere;
+    }
+    public void setGenere(String genere){
+        this.genere=genere;
+    }
+
     public int getDurata(){
         return durata;
     }
@@ -26,22 +36,21 @@ public class Brano {
         this.durata=durata;
     }
 
-    public String getAutore(){
-        return autore;
+    public String getRegista(){
+        return regista;
     }
-    public void setAutore(String autore){
-        this.autore=autore;
+    public void setRegista(String autore){
+        this.regista=regista;
     }
 
-    public Date getDataCreazione(){
+    public String getDataCreazione(){
         return dataCreazione;
     }
-
-    public void setDataCreazione(Date dataCreazione) {
+    public void setDataCreazione(String dataCreazione) {
         this.dataCreazione = dataCreazione;
     }
 
     public String toString(){
-        return titolo;
+        return titolo + genere + durata + dataCreazione + regista;
     }
 }
