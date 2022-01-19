@@ -51,6 +51,16 @@ public class Brano {
     }
 
     public String toString(){
-        return titolo + genere + durata + dataCreazione + regista;
+        return  "Titolo: "+ titolo +
+                "\n" +
+                "Genere: " + genere +
+                "\n" +
+                "Durata: " + durata + " minuti" +
+                "\n" +
+                "Data uscita: " + dataCreazione +
+                "\n" +
+                "Regista: " + regista +
+                "\n\n";
+
     }
 }

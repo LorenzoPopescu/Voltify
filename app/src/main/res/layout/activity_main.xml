@@ -20,15 +20,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.12"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="413dp"
         android:layout_height="54dp"
         android:gravity="center"
-        android:textSize="32dp"
+        android:textSize="32sp"
         android:text="VOLTIFY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -42,12 +41,12 @@
         android:layout_height="42dp"
         android:text="Inserisci FILM"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintEnd_toStartOf="@+id/vedi_lista"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/vedi_lista"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Vedi lista FILM"

@@ -22,4 +22,12 @@ public class GestioneDati{
         }
     }
 
+    public StringBuilder vediLista(){
+        StringBuilder stBui = new StringBuilder();
+        for (Brano brV : ListaBrani){
+            stBui.append(brV.toString());
+        }
+        return stBui;
+    }
+
 }
