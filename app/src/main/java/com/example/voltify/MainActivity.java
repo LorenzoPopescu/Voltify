@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         vedi = (Button)findViewById(R.id.vedi_lista);
         gd = new GestioneDati();
         titolo = (EditText)findViewById(R.id.titolo);
+        // String[] generi = {"",""...} alternativa al file values > strings.xml
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
 // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -44,8 +45,19 @@ public class MainActivity extends AppCompatActivity {
         inserisci.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                gd.addBrani(titolo.getText().toString(),spinner.getSelectedItem().toString(),Integer.parseInt(durata.getText().toString()),data.getText().toString(),regista.getText().toString());
-                gd.listaBrani();
+                int n;
+                String value= durata.getText().toString();
+                try
+                {
+                    n = Integer.parseInt(value);
+                    gd.addBrani(titolo.getText().toString(),spinner.getSelectedItem().toString(),n,data.getText().toString(),regista.getText().toString());
+                }
+                catch(NumberFormatException e)
+                {
+                    Toast errore = Toast.makeText(getApplicationContext(), "Inserisci un numero intero",Toast.LENGTH_SHORT);
+                    errore.show();
+                }
+
                 Toast t = Toast.makeText(getApplicationContext(), "Film aggiunto!",Toast.LENGTH_SHORT);
                 t.show();
                 titolo.setText("Titolo");
